@@ -98,18 +98,43 @@ class _MyHomePageState extends State<MyHomePage> {
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
+            RichText(
+                text: TextSpan(
+                    style: const TextStyle(
+                        fontSize: 50.0,
+                        fontStyle: FontStyle.normal,
+                        color: Colors.blue,
+                        fontFamily: "LeagueGothic"),
+                    children: <TextSpan>[
+                  const TextSpan(text: "This is\n"),
+                  const TextSpan(text: "Flutter App "),
+                  TextSpan(
+                      text: "Demo v1",
+                      style: TextStyle(
+                          fontStyle: FontStyle.italic, color: Colors.blue[900]))
+                ])),
             const Text(
-              'You have pushed the button this many times:',
+              'Hello, World!',
               style: TextStyle(
-                color: Colors.blue,
-              ),
+                  fontSize: 40.0, color: Colors.black87, fontFamily: "Smooch"),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  const Text(
+                    'Number plus:',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  Text(
+                    '$_counter',
+                    style: Theme.of(context).textTheme.headline4,
+                  ),
+                ])
           ],
         ),
       ),
