@@ -1,6 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/src/pages/sun_tab_page.dart';
-import 'package:flutter_app/src/pages/tab_search_page.dart';
+import 'package:flutter_app/src/pages/tab/sun_tab_page.dart';
+import 'package:flutter_app/src/pages/tab/tab_search_page.dart';
 import 'package:flutter_app/src/shared/constants.dart';
 
 class TabPage extends StatefulWidget {
@@ -29,18 +30,23 @@ class _TabPageState extends State<TabPage> {
             ),
             actions: <Widget>[
               IconButton(
-                icon: const Icon(
-                  Icons.search,
-                  color: kDefaultIconColor,
-                ),
-                onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const TabSearchPage()))
-              ),
+                  icon: const Icon(
+                    Icons.search,
+                    color: kDefaultIconColor,
+                  ),
+                  onPressed: () => Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                          builder: (context) => const TabSearchPage(essence: 'Cupertino Page Route')))),
               IconButton(
                 icon: const Icon(
                   Icons.calculate,
                   color: kDefaultIconColor,
                 ),
-                onPressed: null,
+                onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const TabSearchPage(essence: 'Material Page Route'))),
               )
             ],
             bottom: const TabBar(

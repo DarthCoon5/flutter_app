@@ -15,7 +15,8 @@ class _InfiniteListPageState extends State<SunTabPage> {
         child: const Center(
           child: Text('SUNNY',
               style: TextStyle(
-                  color: Colors.amber, backgroundColor: Colors.indigo)),
+                  color: Colors.indigo,
+                  fontWeight: FontWeight.w800)),
         ));
   }
 }
