@@ -41,8 +41,7 @@ class _TabSearchPageState extends State<TabSearchPage> {
           ),
           Container(
             margin: const EdgeInsets.symmetric(vertical: 15.0),
-            decoration: BoxDecoration(
-                border: Border.all(color: Colors.red)),
+            decoration: BoxDecoration(border: Border.all(color: Colors.red)),
             child: Text(
               widget.essence ?? "",
               style: const TextStyle(
