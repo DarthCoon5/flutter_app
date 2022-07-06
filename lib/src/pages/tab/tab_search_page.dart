@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/src/shared/constants.dart';
+import 'package:flutter_app/src/shared/colors.dart';
 
 class TabSearchPage extends StatefulWidget {
   const TabSearchPage({Key? key, this.essence}) : super(key: key);

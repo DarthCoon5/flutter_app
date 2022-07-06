@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/src/pages/tab/sun_tab_page.dart';
 import 'package:flutter_app/src/pages/tab/tab_search_page.dart';
-import 'package:flutter_app/src/shared/constants.dart';
+import 'package:flutter_app/src/shared/colors.dart';
 
 class TabPage extends StatefulWidget {
   const TabPage({Key? key}) : super(key: key);

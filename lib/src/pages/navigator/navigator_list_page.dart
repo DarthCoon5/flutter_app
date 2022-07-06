@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/src/pages/navigator/items_list_page.dart';
+import 'package:flutter_app/src/pages/router/router_delegate.dart';
 
 class NavigatorListPage extends StatefulWidget {
   const NavigatorListPage({Key? key}) : super(key: key);
@@ -26,12 +26,4 @@ class _NavigatorListPageState extends State<NavigatorListPage> {
       onPopPage: (route, result) => route.didPop(result),
     );
   }
-
-
-  void _handleItemTapped(String item) {
-    setState(() {
-      _selectedItem = item;
-    });
-  }
-
 }
